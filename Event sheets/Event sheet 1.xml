@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="value_at_point" sid="633154197061909" static="0" type="number">0</variable>
+        <event-block sid="679147866742598">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="177579012550440" type="System" />
+                <condition id="2" inverted="1" name="Is in touch" sid="860395581981969" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="995568283129854" type="userbox">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="920820864302447">
+            <conditions>
+                <condition id="1" name="On selection changed" sid="627413256719704" type="graph_list" />
+                <condition id="4" name="Compare selected item text" sid="503774830509948" type="graph_list">
+                    <param id="0" name="Text to compare">&quot;Div Out&quot;</param>
+                    <param id="1" name="Case sensitivity">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="368492685032969" type="div_mult">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="849083143784390" type="div_out">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="766082582194613" type="div_in">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="792509696526725">
+            <conditions>
+                <condition id="1" name="On selection changed" sid="662215187260594" type="graph_list" />
+                <condition id="4" name="Compare selected item text" sid="992621681003113" type="graph_list">
+                    <param id="0" name="Text to compare">&quot;Div Mult&quot;</param>
+                    <param id="1" name="Case sensitivity">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="116969275193744" type="div_mult">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="178347452206489" type="div_out">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="276822003983060" type="div_in">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="425014571492749">
+            <conditions>
+                <condition id="1" name="On selection changed" sid="351406827796264" type="graph_list" />
+                <condition id="4" name="Compare selected item text" sid="281574985325482" type="graph_list">
+                    <param id="0" name="Text to compare">&quot;Div In&quot;</param>
+                    <param id="1" name="Case sensitivity">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="868065040515751" type="div_mult">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="407213755813075" type="div_out">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="495826581740465" type="div_in">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="375154801176147">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="456477052582093" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="853076206374661" type="div_mult">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="668225680507059">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="405692220301523" type="userbox">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">480</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="762541598403034" type="div_value_text">
+                    <param id="0" name="Text">&quot;0&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="825204580310815">
+            <conditions>
+                <condition id="4" name="Compare selected item text" sid="120954741425584" type="graph_list">
+                    <param id="0" name="Text to compare">&quot;Div Out&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="589610293077371" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="743194839964153" type="Function">
+                    <param id="0" name="Name">&quot;div_out_calc&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="952353612098370" type="Function">
+                    <param id="0" name="Name">&quot;change_div_value&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="706909550705385">
+            <conditions>
+                <condition id="4" name="Compare selected item text" sid="144565283224091" type="graph_list">
+                    <param id="0" name="Text to compare">&quot;Div In&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="214586069388012" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="272681333508981" type="Function">
+                    <param id="0" name="Name">&quot;div_in_calc&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="655977601787581" type="Function">
+                    <param id="0" name="Name">&quot;change_div_value&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="317381647696010">
+            <conditions>
+                <condition id="4" name="Compare selected item text" sid="309192154736196" type="graph_list">
+                    <param id="0" name="Text to compare">&quot;Div Mult&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="612615378457936" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="542018436265037" type="Function">
+                    <param id="0" name="Name">&quot;div_mult_calc&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="121278694507869" type="Function">
+                    <param id="0" name="Name">&quot;change_div_value&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="207546796430587">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="844302296096364" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="847892159388787" type="userbox">
+                    <param id="0" name="X">Touch.X</param>
+                    <param id="1" name="Y">Touch.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="549881456402036" title="TestGroup">
+            <sub-events>
+                <variable constant="0" name="x_val" sid="105037230704039" static="0" type="number">0</variable>
+                <variable constant="0" name="y_val" sid="640295092893266" static="0" type="number">0</variable>
+                <event-block sid="419493528131885">
+                    <conditions>
+                        <condition id="0" name="On function" sid="769973247888274" type="Function">
+                            <param id="0" name="Name">&quot;div_mult_calc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="790527196262735" type="System">
+                            <param id="0" name="Variable">x_val</param>
+                            <param id="1" name="Value">Function.Call(&quot;convert_coords&quot;, userbox.X)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="972986787531945" type="xval">
+                            <param id="0" name="Text">x_val</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="596341131615100" type="System">
+                            <param id="0" name="Variable">y_val</param>
+                            <param id="1" name="Value">-Function.Call(&quot;convert_coords&quot;, userbox.Y)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="219489228014953" type="yval">
+                            <param id="0" name="Text">y_val</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="160977168862982" type="System">
+                            <param id="0" name="Variable">value_at_point</param>
+                            <param id="1" name="Value">(pi*x_val*cos((pi*pi*x_val*y_val)/32400) - 360 * sin((pi*x_val)/180))/50</param>
+                        </action>
+                        <action id="0" name="Set text" sid="893788561328851" type="value">
+                            <param id="0" name="Text">value_at_point</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="717650895116984">
+                    <conditions>
+                        <condition id="0" name="On function" sid="936127636946673" type="Function">
+                            <param id="0" name="Name">&quot;div_out_calc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="830860422417843" type="System">
+                            <param id="0" name="Variable">value_at_point</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="209631660346911" type="System">
+                            <param id="0" name="Variable">x_val</param>
+                            <param id="1" name="Value">Function.Call(&quot;convert_coords&quot;, userbox.X)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="514334649880129" type="xval">
+                            <param id="0" name="Text">x_val</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="991123817526610" type="System">
+                            <param id="0" name="Variable">y_val</param>
+                            <param id="1" name="Value">-Function.Call(&quot;convert_coords&quot;, userbox.Y)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="685050745507082" type="yval">
+                            <param id="0" name="Text">y_val</param>
+                        </action>
+                        <action id="0" name="Set text" sid="211693499956856" type="value">
+                            <param id="0" name="Text">value_at_point</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771443532915567">
+                    <conditions>
+                        <condition id="0" name="On function" sid="425893152789504" type="Function">
+                            <param id="0" name="Name">&quot;div_in_calc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="837628652070037" type="System">
+                            <param id="0" name="Variable">value_at_point</param>
+                            <param id="1" name="Value">-2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="825349759590820" type="System">
+                            <param id="0" name="Variable">x_val</param>
+                            <param id="1" name="Value">Function.Call(&quot;convert_coords&quot;, userbox.X)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="699333795072754" type="xval">
+                            <param id="0" name="Text">x_val</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="777868133873346" type="System">
+                            <param id="0" name="Variable">y_val</param>
+                            <param id="1" name="Value">-Function.Call(&quot;convert_coords&quot;, userbox.Y)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="126829013027806" type="yval">
+                            <param id="0" name="Text">y_val</param>
+                        </action>
+                        <action id="0" name="Set text" sid="144310320739845" type="value">
+                            <param id="0" name="Text">value_at_point</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="603419084080125">
+            <conditions>
+                <condition id="0" name="On function" sid="725979426712391" type="Function">
+                    <param id="0" name="Name">&quot;change_div_value&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="643882977025016" type="value_display">
+                    <param id="0" name="Text">value_at_point</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="812438025073764">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="646933052480263" type="System">
+                            <param id="0" name="Variable">value_at_point</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="417683214756853" type="userbox">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">480</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="136641146707876" type="div_value_text">
+                            <param id="0" name="Text">&quot;+&quot;</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="184768652433234" type="div_value_text">
+                            <param id="0" name="Size (pt)">value_at_point * 20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="564497471862404">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="954959785701762" type="System">
+                            <param id="0" name="Variable">value_at_point</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="797539153963398" type="userbox">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">480</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="856345000854863" type="div_value_text">
+                            <param id="0" name="Text">&quot;-&quot;</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="365145766140868" type="div_value_text">
+                            <param id="0" name="Size (pt)">abs(value_at_point) * 20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="727925522169377">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="911245170166277" type="userbox">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">480</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="856431439057235" type="System">
+                            <param id="0" name="Variable">value_at_point</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="482236805647178" type="div_value_text">
+                            <param id="0" name="Text">&quot;0&quot;</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="206537053236550" type="div_value_text">
+                            <param id="0" name="Size (pt)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Calculate pixel grid location, looks awful because it&apos;s pixels --&gt; coordinates (radians) --&gt; degrees</comment>
+        <event-block sid="807017111195948">
+            <conditions>
+                <condition id="0" name="On function" sid="265347272392633" type="Function">
+                    <param id="0" name="Name">&quot;convert_coords&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="578797604988766" type="Function">
+                    <param id="0" name="Value">(Function.Param(0) - 240)*(3/8)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="600920595401144">
+            <conditions>
+                <condition id="0" name="On function" sid="801788109939966" type="Function">
+                    <param id="0" name="Name">&quot;convert_coords_old&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="572928901481627" type="Function">
+                    <param id="0" name="Value">(Function.Param(0) - 240)*(3/8)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

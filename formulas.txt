@@ -1,0 +1,2 @@
+((pi*pi*cos((pi*pi*x_val*y_val)/32400))/32400) - ((pi/90)*sin((pi*x_val)/180))
+(pi*pi*cos((pi*pi*x_val*y_val)/32400)-360*pi*sin((pi*x_val)/180))/32400
