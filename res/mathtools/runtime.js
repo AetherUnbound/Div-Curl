@@ -165,20 +165,57 @@ cr.plugins_.MathTools = function(runtime)
 	//////////////////////////////////////
 	// Expressions
 	function Exps() {};
-	
+
 	// the example expression
-	Exps.prototype.ToPolarGetR = function (ret, x_val, y_val)	// 'ret' must always be the first parameter - always return the expression's result through it!
-	{
-        ret.set_float(x_val / y_val)
+	//Exps.prototype.ToPolarGetR = function (ret, x, y)	
+        // 'ret' must always be the first parameter - always return the expression's result through it!
+	//{
+        // r = sqrt(x^2 + y^2)
 		//ret.set_int(1337);				// return our value
 		// ret.set_float(0.5);			// for returning floats
 		// ret.set_string("Hello");		// for ef_return_string
 		// ret.set_any("woo");			// for ef_return_any, accepts either a number or string
+	//};
+	
+
+    //Expect values to be pixel coordinates
+	Exps.prototype.ToPolarGetR = function (ret, x, y)	
+	{
+        // r = sqrt(x^2 + y^2)
+        x = (x - 240)/24;
+        y = -(y - 240)/24;
+        var r = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2))
+        ret.set_float(r)
 	};
 
-    Exps.prototype.ToPolarGetTheta = function (ret, x_val, y_val)
+    Exps.prototype.ToPolarGetTheta = function (ret, x, y)
     {
-        ret.set_float(x_val * y_val)
+        //theta = arctan(y/x)
+        x = (x - 240)/24;
+        y = -(y - 240)/24;
+        //var t = Math.atan(y/x)
+        //if (x > 0 && y > 0) {
+        //    //first quadrant
+        //    //  do nothing
+        //}
+        //else if ( x < 0 && y > 0) {
+        //    //second quadrant
+        //    t = Math.PI - t
+        //}
+        //else if (x < 0 && y < 0) {
+        //    //third quadrant
+        //    t = Math.PI + t
+        //}
+        //else {
+        //    //fourth quadrant
+        //    t = 2 * Math.PI - t
+        //}
+        var r = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2))
+        var t = 2 * Math.atan(y/(x + r))
+        if (y < 0) {
+            t = 2 * Math.PI + t
+        }
+        ret.set_float(t)
     };
 	
 	// ... other expressions here ...
