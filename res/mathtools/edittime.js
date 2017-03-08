@@ -92,6 +92,10 @@ AddExpression(0, ef_return_number, "To Polar & Get 'r'", "Conversions", "ToPolar
 AddNumberParam("X", "Enter x value to be converted into polar coordinates")
 AddNumberParam("Y", "Enter y value to be converted into polar coordinates")
 AddExpression(0, ef_return_number, "To Polar & Get 'theta'", "Conversions", "ToPolarGetTheta", "Convert X,Y coordinates to polar coordinates, return 'theta'");
+
+AddNumberParam("a", "Enter first value")
+AddNumberParam("b", "Enter second value")
+AddExpression(0, ef_return_number, "Power Function", "Conversions", "Power", "Perform a^b or a to the power of b");
 ////////////////////////////////////////
 ACESDone();
 

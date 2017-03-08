@@ -217,6 +217,10 @@ cr.plugins_.MathTools = function(runtime)
         }
         ret.set_float(t)
     };
+
+    Exps.prototype.Power = function(ret, a, b) {
+        ret.set_float(Math.pow(a,b));
+    };
 	
 	// ... other expressions here ...
 	
